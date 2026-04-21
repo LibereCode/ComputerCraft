@@ -6,8 +6,7 @@ local t = turtle ---@type table -- turtle
 ---@param tags boolean|nil -- _true_ to print tags, else _false_|`nil`
 ---@return boolean
 local function blockStats(direction, state, tags)
-    local a = false
-    local b = {}
+    local a, b = false, {}
     if direction == "up" then
         a, b = t.inspectUp()
     elseif direction == "down" then
@@ -107,17 +106,24 @@ local function move(direction, n)
 end
 
 function Main()
+    local chops = 0 ---@type integer
     while true do
-        if not autoFuel() then
-            break
-        end
+        -- if not autoFuel() then
+        --     break
+        -- end
         if t.detectDown() then
-            move(t.up, 10)
+            local atk, _ = t.attack()
+            if atk then
+                chops = chops + 1
+                print("\tCHOP", chops)
+            else
+                -- print("wait")
+                io.write("wait...")
+                _G.sleep(0.5)
+            end
         else
-            move(t.down, 10)
+            move(t.down, 2)
         end
-        print(t.attack())
-        -- blockStats("down")
     end
 end
 
