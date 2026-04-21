@@ -7,6 +7,7 @@
         "postfix": "@"
     },
     "diagnostics": {
+        "diagnosticInterval": 123,
         "globals": [],
         "disable": [
             "undefined-global"
