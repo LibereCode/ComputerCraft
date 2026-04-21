@@ -37,6 +37,8 @@ end
 ---Refuels and print details of the refuelling
 ---@return boolean
 local function autoFuel()
+    local lvl = t.getFuelLevel() ---@type number -- initial fuelLevel
+
     ---Iterate over _table_ `fuelArr` and if any item in it is a substring of
     ---`itemName`, return `true` else return `false`
     ---@param fuelArr table
@@ -51,6 +53,8 @@ local function autoFuel()
         return false
     end
 
+    ---Refuels, print before and after, and return success
+    ---@return boolean
     local function refuelNow()
         local ok, err = t.refuel() ---@type boolean, number
 
@@ -72,8 +76,8 @@ local function autoFuel()
         return false
     end
 
-    local lvl = t.getFuelLevel() ---@type number
     if lvl < 100 then
+        print("fuellevel, low-btw", lvl)
         if isFuelSelect() then
             return refuelNow()
         else
@@ -87,7 +91,7 @@ local function autoFuel()
             return refuelNow()
         end
     else
-        print(lvl)
+        print("fuellevel", lvl)
         return true
     end
 end
@@ -112,7 +116,8 @@ function Main()
         else
             move(t.down, 10)
         end
-        blockStats("down")
+        print(t.attack())
+        -- blockStats("down")
     end
 end
 
