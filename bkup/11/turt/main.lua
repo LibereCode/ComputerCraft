@@ -17,21 +17,15 @@ end
 function Main()
     local chops = 0 ---@type integer
     while true do
-        -- if not autoFuel() then
-        --     break
-        -- end
+        if not autoFuel() then
+            break
+        end
         if t.detectDown() then
-            local atk, _ = t.attack()
-            if atk then
-                chops = chops + 1
-                print("\tCHOP", chops)
-            else
-                -- print("wait")
-                io.write("wait...")
-                ---@class _G
-                ---@field sleep function(seconds:number)
-                _G.sleep(0.5) ---Like shell `sleep`
-            end
+            print("what the frick?")
+            ---@class _G
+            ---@field sleep function(seconds:number)
+            _G.sleep(0.5) ---Like shell `sleep`
+            print("hello world?")
         else
             move(t.down, 2)
         end

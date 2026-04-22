@@ -6,7 +6,8 @@
     },
     "diagnostics": {
         "globals": [
-            "turtle"
+            "turtle",
+            "printError"
         ],
         "workspaceDelay": 567
     },

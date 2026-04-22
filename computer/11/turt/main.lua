@@ -1,7 +1,5 @@
 local t = turtle ---@type table -- turtle
 
-local blockStats = require("lua.block").blockStats
-
 local autoFuel = require("lua.fuel").autoFuel
 
 ---@param direction function -- t.{up|down|forward|back}
@@ -15,16 +13,18 @@ local function move(direction, n)
 end
 
 function Main()
-    while true do
+    local chops = 0 ---@type integer
+    -- while true do
+    for _ = 1, 33 do
         if not autoFuel() then
             break
         end
-        if t.detectDown() then
-            move(t.up, 10)
-        else
-            move(t.down, 10)
-        end
-        blockStats("down")
+        -- print("what the frick?")
+        -- -@class _G
+        -- -@field sleep function(seconds:number)
+        -- _G.sleep(0.5) ---Like shell `sleep`
+        -- print("hello world?")
+        require("lua.mine").mineStair()
     end
 end
 

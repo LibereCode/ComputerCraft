@@ -24,7 +24,8 @@ function Main()
         else
             move(t.down, 10)
         end
-        blockStats("down")
+        print(t.attack())
+        -- blockStats("down")
     end
 end
 

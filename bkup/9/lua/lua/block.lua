@@ -2,6 +2,8 @@
 
 local M = {}
 
+-- local t = turtle
+
 ---Print the contents of an inspect block
 ---@param direction "up"|"down"|"front" -- _"up"_, _"down"_, _"front"_
 ---@param state boolean|nil -- _true_ to print state, else _false_|`nil`

@@ -1,6 +1,7 @@
 ---@class fuelModule
 
 local M = {}
+local t = turtle
 
 ---Refuels and print details of the refuelling
 ---@return boolean
