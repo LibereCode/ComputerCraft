@@ -1,5 +1,5 @@
 ---@class fuelModule
----@field autoFuel fun(): boolean
+
 local M = {}
 
 ---Refuels and print details of the refuelling

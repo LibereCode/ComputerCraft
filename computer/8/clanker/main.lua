@@ -9,7 +9,7 @@ local autoFuel = require("fuel").autoFuel
 ---@return nil
 local function move(direction, n)
     n = n or 1
-    for i = 1, n do
+    for _ = 1, n do
         direction()
     end
 end
@@ -25,7 +25,7 @@ function Main()
             move(t.down, 10)
         end
         print(t.attack())
-        blockStats("down")
+        -- blockStats("down")
     end
 end
 

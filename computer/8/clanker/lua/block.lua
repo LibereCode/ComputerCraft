@@ -1,3 +1,5 @@
+---@class blockStats
+
 local M = {}
 
 ---Print the contents of an inspect block
