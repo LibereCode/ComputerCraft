@@ -1,1 +1,3 @@
--- TODO: make this a template for `main.lua`
+--[[
+    TODO: make this a template for `main.lua`
+]]

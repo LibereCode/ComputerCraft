@@ -9,3 +9,8 @@ or just replace `~/.local/share/PrismLauncher/instances/` with `~/path/to/your/m
 ## Dir structure
 
 Maybe have it like I have `test.lua` (temporarily)
+
+## Library
+
+Copied from the repo: [lua-ls-cc-tweaked](https://github.com/nvim-computercraft/lua-ls-cc-tweaked),
+but also contain some additions I have made about computer-craft addons.
